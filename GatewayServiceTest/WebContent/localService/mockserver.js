@@ -12,14 +12,9 @@ sap.ui.define([
 		init: function() {
 			// create
 			var oMockServer = new MockServer({
-				rootUri: "/sap/opu/odata/sap/Z_SFLIGHT_MSW_SRV_SRV/",
+				rootUri: "/sap/opu/odata/sap/Z_SFLIGHT_MSW_SRV_SRV/"
 			});
-			debugger;
-			var oUriParameters = jQuery.sap.getUriParameters();
-			MockServer.config({
-				autoRespond: true,
-				autoRespondAfter: oUriParameters.get("serverDelay") || 1000
-			});
+
 			// simulate against the metadata and mock data
 			var sPath = jQuery.sap.getModulePath("gatewayservicetest.localService");
 			oMockServer.simulate(sPath + "/metadata.xml", sPath + "/mockdata");

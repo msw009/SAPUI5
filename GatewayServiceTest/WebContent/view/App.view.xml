@@ -30,10 +30,6 @@
 							</Column>
 							<Column>
 								<Text
-								   text="{i18n>currency}"/>
-							</Column>
-							<Column>
-								<Text
 								   text="{i18n>planetype}"/>
 							</Column>
 							<Column>
@@ -61,8 +57,16 @@
 											pattern: 'MM/dd/yyyy'
 											}
 										}"/>
-									<Text text="{Price}"/>
-									<Text text="{Currency}"/>
+									<Text text="{
+										parts: [
+											{path: 'Price'},
+											{path: 'Currency'}
+										],
+										type: 'sap.ui.model.type.Currency',
+										formatOptions: {
+											showMeasure: true
+											}
+										}"/>
 									<Text text="{Planetype}"/>
 									<Text text="{Seatsmax}"/>
 									<Text text="{Seatsocc}"/>
