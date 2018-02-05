@@ -1,0 +1,78 @@
+<mvc:View
+   controllerName="gatewayservicetest.controller.App"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc"
+   displayBlock="true">
+	<App>
+		<pages>
+			<Page
+			   title="{i18n>homePageTitle}">
+				<content>
+					<Table
+					   id="list" 
+					   items="{/SFLIGHT}">
+						<columns>
+							<Column>
+								<Text
+								   text="{i18n>carrid}"/>
+							</Column>
+							<Column>
+								<Text
+								   text="{i18n>connid}"/>
+							</Column>
+							<Column>
+								<Text
+								   text="{i18n>fldate}"/>
+							</Column>
+							<Column>
+								<Text
+									text="{i18n>price}"/>
+							</Column>
+							<Column>
+								<Text
+								   text="{i18n>currency}"/>
+							</Column>
+							<Column>
+								<Text
+								   text="{i18n>planetype}"/>
+							</Column>
+							<Column>
+								<Text
+								   text="{i18n>seatsmax}"/>
+							</Column>
+							<Column>
+								<Text
+								   text="{i18n>seatsocc}"/>
+							</Column>
+							<Column>
+								<Text
+								   text="{i18n>paymentsum}"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>									
+									<Text text="{Carrid}"/>
+									<Text text="{Connid}"/>
+									<Text text="{
+										path: 'Fldate',
+										type: 'sap.ui.model.type.Date',
+										formatOptions: {
+											pattern: 'MM/dd/yyyy'
+											}
+										}"/>
+									<Text text="{Price}"/>
+									<Text text="{Currency}"/>
+									<Text text="{Planetype}"/>
+									<Text text="{Seatsmax}"/>
+									<Text text="{Seatsocc}"/>
+									<Text text="{Paymentsum}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
