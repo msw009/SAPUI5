@@ -1,76 +1,54 @@
-<mvc:View
-   controllerName="gatewayservicetest.controller.App"
-   xmlns="sap.m"
-   xmlns:mvc="sap.ui.core.mvc"
-   displayBlock="true">
+<mvc:View controllerName="gatewayservicetest.controller.App" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
 	<App>
 		<pages>
-			<Page
-			   title="{i18n>homePageTitle}">
+			<Page title="{i18n>homePageTitle}">
 				<content>
-					<Table
-					   id="list" 
-					   items="{/SFLIGHT}">
+					<Table id="list" title="{i18n>title}" items="{/SFLIGHT}" enableCellFilter="true" enableBusyIndicator="true">
+						<headerToolbar>
+							<OverflowToolbar>
+								<ToolbarSpacer/>
+								<SearchField id="carrid" liveChange="onFilter"></SearchField>
+								<Button text="Reset" type="Transparent" press="onReset"/>
+							</OverflowToolbar>
+						</headerToolbar>
 						<columns>
 							<Column>
-								<Text
-								   text="{i18n>carrid}"/>
+								<Text text="{i18n>carrid}"/>
 							</Column>
 							<Column>
-								<Text
-								   text="{i18n>connid}"/>
+								<Text text="{i18n>connid}"/>
 							</Column>
 							<Column>
-								<Text
-								   text="{i18n>fldate}"/>
+								<Text text="{i18n>fldate}"/>
 							</Column>
 							<Column>
-								<Text
-									text="{i18n>price}"/>
+								<Text text="{i18n>price}"/>
 							</Column>
 							<Column>
-								<Text
-								   text="{i18n>planetype}"/>
+								<Text text="{i18n>planetype}"/>
 							</Column>
 							<Column>
-								<Text
-								   text="{i18n>seatsmax}"/>
+								<Text text="{i18n>seatsmax}"/>
 							</Column>
 							<Column>
-								<Text
-								   text="{i18n>seatsocc}"/>
+								<Text text="{i18n>seatsocc}"/>
 							</Column>
 							<Column>
-								<Text
-								   text="{i18n>paymentsum}"/>
+								<Text text="{i18n>paymentsum}"/>
 							</Column>
 						</columns>
 						<items>
 							<ColumnListItem>
-								<cells>									
+								<cells>
 									<Text text="{Carrid}"/>
 									<Text text="{Connid}"/>
-									<Text text="{
-										path: 'Fldate',
-										type: 'sap.ui.model.type.Date',
-										formatOptions: {
-											pattern: 'MM/dd/yyyy'
-											}
-										}"/>
-									<Text text="{
-										parts: [
-											{path: 'Price'},
-											{path: 'Currency'}
-										],
-										type: 'sap.ui.model.type.Currency',
-										formatOptions: {
-											showMeasure: true
-											}
-										}"/>
+									<Text text="{ path: 'Fldate', type: 'sap.ui.model.type.Date', formatOptions: { pattern: 'MM/dd/yyyy' } }"/>
+									<Text text="{ parts: [ {path: 'Price'}, {path: 'Currency'} ], type: 'sap.ui.model.type.Currency', formatOptions: { showMeasure: true } }"/>
 									<Text text="{Planetype}"/>
 									<Text text="{Seatsmax}"/>
 									<Text text="{Seatsocc}"/>
-									<Text text="{Paymentsum}"/>
+									<Text
+										text="{ parts: [ {path: 'Paymentsum'}, {path: 'Currency'} ], type: 'sap.ui.model.type.Currency', formatOptions: { showMeasure: true } }"/>
 								</cells>
 							</ColumnListItem>
 						</items>
