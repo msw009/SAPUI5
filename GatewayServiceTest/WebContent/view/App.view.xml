@@ -7,7 +7,7 @@
 						<headerToolbar>
 							<OverflowToolbar>
 								<ToolbarSpacer/>
-								<SearchField id="carrid" liveChange="onFilter"></SearchField>
+								<SearchField id="carrid" liveChange="onFilter" width="10rem"/>
 								<Button text="Reset" type="Transparent" press="onReset"/>
 							</OverflowToolbar>
 						</headerToolbar>
