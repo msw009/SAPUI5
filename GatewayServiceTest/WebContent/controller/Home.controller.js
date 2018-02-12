@@ -1,12 +1,12 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller",
+	"gatewayservicetest/controller/BaseController",
 	"sap/ui/model/json/JSONModel",
 	"gatewayservicetest/model/formatter",
 	'sap/ui/model/Sorter',
 	'sap/ui/model/Filter'
-], function(Controller, JSONModel, formatter, Sorter, Filter) {
+], function(BaseController, JSONModel, formatter, Sorter, Filter) {
 	"use strict";
-	return Controller.extend("gatewayservicetest.controller.App", {
+	return BaseController.extend("gatewayservicetest.controller.App", {
 		formatter: formatter,
 
 		onInit: function() {

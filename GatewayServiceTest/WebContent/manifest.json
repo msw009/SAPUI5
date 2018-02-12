@@ -59,7 +59,10 @@
 				"viewPath": "gatewayservicetest.view",
 				"controlId": "app",
 				"controlAggregation": "pages",
-				"transition": "slide"
+				"transition": "slide",
+            "bypassed": {
+               "target": "notFound"
+            }
 			},
 			"routes": [{
 				"pattern": "",
@@ -70,7 +73,11 @@
 				"home": {
 					"viewName": "Home",
 					"viewLevel" : 1
-				}
+				},
+            	"notFound": {
+            		"viewName": "NotFound",
+            		"transition": "show"
+            	}
 			}
 		}
 	}
