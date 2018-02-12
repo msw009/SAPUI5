@@ -51,6 +51,27 @@
 		"contentDensities": {
 			"compact": true,
 			"cozy": true
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "gatewayservicetest.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"transition": "slide"
+			},
+			"routes": [{
+				"pattern": "",
+				"name": "appHome",
+				"target": "home"
+			}],
+			"targets": {
+				"home": {
+					"viewName": "Home",
+					"viewLevel" : 1
+				}
+			}
 		}
 	}
 }
