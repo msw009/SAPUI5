@@ -11,7 +11,7 @@ sap.ui.define([
 
 		onInit: function() {
 			
-			var oModel = new sap.ui.model.odata.v2.ODataModel('/sap/opu/odata/sap/Z_SFLIGHT_MSW_SRV/', true);
+			var oModel = new sap.ui.model.odata.v2.ODataModel('/sap/opu/odata/SAP/Z_SFLIGHT_MSW_SRV_01/', true);
 			this.getView().setModel(oModel);
 			
 		},
