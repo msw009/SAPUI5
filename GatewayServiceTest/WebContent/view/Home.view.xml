@@ -3,7 +3,7 @@
 		<pages>
 			<Page title="{i18n>homePageTitle}">
 				<content>
-					<Table id="list" growing="true" growingThreshold="10" title="{i18n>title}" items="{/SFLIGHT}" enableCellFilter="true" enableBusyIndicator="true">
+					<Table id="list" growing="true" growingThreshold="10" title="{i18n>title}" items="{/SFLIGHTSet}" enableCellFilter="true" enableBusyIndicator="true">
 						<headerToolbar>
 							<OverflowToolbar>
 								<ToolbarSpacer/>

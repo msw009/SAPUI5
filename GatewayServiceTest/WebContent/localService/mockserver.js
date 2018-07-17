@@ -12,7 +12,7 @@ sap.ui.define([
 		init: function() {
 			// create
 			var oMockServer = new MockServer({
-				rootUri: "/sap/opu/odata/sap/Z_SFLIGHT_MSW_SRV_SRV/"
+				rootUri: "/sap/opu/odata/sap/Z_SFLIGHT_MSW_SRV/"
 			});
 
 			// simulate against the metadata and mock data
